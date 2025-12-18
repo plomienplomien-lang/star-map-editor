@@ -2,28 +2,12 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Edytor mapy gwiazd</title>
-  
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- d3-celestial -->
-  <script src="https://ofrohn.github.io/files/celestial/celestial.js"></script>
-
+  <title>Edytor plakatu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="controls">
-    <h1>Edytor mapy gwiazd</h1>
-
-    <label>
-      Data:
-      <input type="date" id="date">
-    </label>
-
-    <label>
-      Miasto / Szerokość / Długość:
-      <input type="text" id="city" placeholder="Miasto lub lat,lon">
-    </label>
+    <h1>Edytor plakatu</h1>
 
     <label>
       Tytuł plakatu:
@@ -46,21 +30,19 @@
     </label>
 
     <label>
-      Styl mapy:
+      Styl plakatu:
       <select id="style">
+        <option value="white">Biały</option>
         <option value="dark">Ciemny</option>
-        <option value="light">Jasny</option>
         <option value="pastel">Pastel</option>
       </select>
     </label>
 
-    <button id="generate">Generuj mapę</button>
     <button id="download">Pobierz PNG</button>
   </div>
 
   <div id="workspace">
-    <div id="map-container">
-      <div id="celestial-map"></div>
+    <div id="poster">
       <div id="poster-title"></div>
     </div>
     <div id="preview">
