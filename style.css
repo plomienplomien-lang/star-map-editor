@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+
+.controls {
+  width: 280px;
+  padding: 20px;
+  background: #1a1a1a;
+  box-sizing: border-box;
+}
+
+.controls label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.controls input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+}
+
+.controls button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#map-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#celestial-map {
+  width: 600px;
+  height: 600px;
+}
+
+#poster-title {
+  position: absolute;
+  bottom: 40px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
