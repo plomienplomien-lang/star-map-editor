@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Star Map Editor</title>
+  <title>Star Map Editor z podglądem</title>
 
   <!-- D3 -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -31,9 +31,15 @@
     <button id="download">Pobierz PNG</button>
   </div>
 
-  <div id="map-container">
-    <div id="celestial-map"></div>
-    <div id="poster-title"></div>
+  <div id="workspace">
+    <div id="map-container">
+      <div id="celestial-map"></div>
+      <div id="poster-title"></div>
+    </div>
+    <div id="preview">
+      <h3>Podgląd tytułu</h3>
+      <div id="preview-title"></div>
+    </div>
   </div>
 
   <script src="app.js"></script>
