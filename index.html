@@ -2,8 +2,10 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Edytor plakatu</title>
+  <title>Edytor plakatu gwiazd</title>
   <link rel="stylesheet" href="style.css">
+  <!-- html2canvas do eksportu PNG -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
   <div class="controls">
@@ -15,7 +17,7 @@
     </label>
 
     <label>
-      Czcionka tytułu:
+      Czcionka:
       <select id="font">
         <option value="Arial">Arial</option>
         <option value="Georgia">Georgia</option>
@@ -32,8 +34,9 @@
     <label>
       Styl plakatu:
       <select id="style">
-        <option value="white">Biały</option>
+        <option value="stars">Gwiazdy</option>
         <option value="dark">Ciemny</option>
+        <option value="white">Biały</option>
         <option value="pastel">Pastel</option>
       </select>
     </label>
@@ -43,6 +46,7 @@
 
   <div id="workspace">
     <div id="poster">
+      <canvas id="poster-canvas"></canvas>
       <div id="poster-title"></div>
     </div>
     <div id="preview">
