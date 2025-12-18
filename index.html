@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Star Map Editor</title>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- d3-celestial -->
+  <script src="https://ofrohn.github.io/files/celestial/celestial.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="controls">
+    <h1>Mapa gwiazd</h1>
+
+    <label>
+      Data:
+      <input type="date" id="date" />
+    </label>
+
+    <label>
+      Tytuł plakatu:
+      <input type="text" id="title" placeholder="Nasza noc" />
+    </label>
+
+    <button id="generate">Generuj mapę</button>
+    <button id="download">Pobierz PNG</button>
+  </div>
+
+  <div id="map-container">
+    <div id="celestial-map"></div>
+    <div id="poster-title"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
