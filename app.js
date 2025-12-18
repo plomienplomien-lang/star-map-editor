@@ -22,13 +22,20 @@ const config = {
 // Inicjalizacja
 Celestial.display(config);
 
-// Obsługa generowania
+// Elementy
+const titleInput = document.getElementById("title");
+const posterTitle = document.getElementById("poster-title");
+const previewTitle = document.getElementById("preview-title");
+
+// Aktualizacja tytułu na mapie i podglądzie
+titleInput.addEventListener("input", () => {
+  posterTitle.innerText = titleInput.value;
+  previewTitle.innerText = titleInput.value;
+});
+
+// Obsługa generowania mapy
 document.getElementById("generate").addEventListener("click", () => {
   const date = document.getElementById("date").value;
-  const title = document.getElementById("title").value;
-
-  document.getElementById("poster-title").innerText = title;
-
   if (date) {
     const d = new Date(date);
     Celestial.date(d);
